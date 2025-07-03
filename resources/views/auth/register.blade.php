@@ -1,76 +1,32 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow mt-10" dir="rtl">
+<div class="container" dir="rtl">
+    <h2 class="text-center font-bold text-2xl mb-6">إنشاء حساب جديد</h2>
 
-    <h2 class="text-2xl font-bold text-center text-blue-700 mb-6">إنشاء حساب جديد</h2>
-
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="{{ route('register') }}" class="max-w-md mx-auto space-y-4">
         @csrf
 
-        {{-- الاسم --}}
-        <div class="mb-4">
-            <label class="block font-semibold mb-1">الاسم الكامل</label>
-            <input type="text" name="name" value="{{ old('name') }}" required
-                   class="w-full border rounded p-2" placeholder="مثال: أحمد بن خالد">
-        </div>
+        <input type="text" name="name" placeholder="الاسم الكامل" class="form-input w-full" required>
+        <input type="email" name="email" placeholder="البريد الإلكتروني" class="form-input w-full" required>
+        <input type="password" name="password" placeholder="كلمة المرور" class="form-input w-full" required>
+        <input type="password" name="password_confirmation" placeholder="تأكيد كلمة المرور" class="form-input w-full" required>
 
-        {{-- البريد الإلكتروني --}}
-        <div class="mb-4">
-            <label class="block font-semibold mb-1">البريد الإلكتروني</label>
-            <input type="email" name="email" value="{{ old('email') }}" required
-                   class="w-full border rounded p-2" placeholder="example@email.com">
-        </div>
+        <select name="gender" class="form-select w-full" required>
+            <option value="">اختر الجنس</option>
+            <option value="ذكر">ذكر</option>
+            <option value="أنثى">أنثى</option>
+        </select>
 
-        {{-- الجنس --}}
-        <div class="mb-4">
-            <label class="block font-semibold mb-1">الجنس</label>
-            <select name="gender" required class="w-full border rounded p-2">
-                <option value="">اختر الجنس</option>
-                <option value="ذكر">ذكر</option>
-                <option value="أنثى">أنثى</option>
-            </select>
-        </div>
+        <select name="country_id" class="form-select w-full" required>
+            <option value="">اختر الدولة</option>
+            @foreach ($countries as $country)
+                <option value="{{ $country->id }}">{{ $country->name_ar }}</option>
+            @endforeach
+        </select>
 
-        {{-- العمر --}}
-        <div class="mb-4">
-            <label class="block font-semibold mb-1">العمر</label>
-            <input type="number" name="age" value="{{ old('age') }}" required
-                   class="w-full border rounded p-2" placeholder="مثال: 30">
-        </div>
-
-        {{-- الدولة --}}
-        <div class="mb-4">
-            <label class="block font-semibold mb-1">الدولة</label>
-            <input type="text" name="country" value="{{ old('country') }}" required
-                   class="w-full border rounded p-2" placeholder="مثال: الجزائر">
-        </div>
-
-        {{-- نوع الزواج --}}
-        <div class="mb-4">
-            <label class="block font-semibold mb-1">نوع الزواج (اختياري)</label>
-            <input type="text" name="marriage_type" value="{{ old('marriage_type') }}"
-                   class="w-full border rounded p-2" placeholder="مثال: زواج دائم / مؤقت">
-        </div>
-
-        {{-- كلمة المرور --}}
-        <div class="mb-4">
-            <label class="block font-semibold mb-1">كلمة المرور</label>
-            <input type="password" name="password" required
-                   class="w-full border rounded p-2">
-        </div>
-
-        {{-- تأكيد كلمة المرور --}}
-        <div class="mb-6">
-            <label class="block font-semibold mb-1">تأكيد كلمة المرور</label>
-            <input type="password" name="password_confirmation" required
-                   class="w-full border rounded p-2">
-        </div>
-
-        {{-- زر التسجيل --}}
-        <button type="submit"
-                class="w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700">
-            إنشاء حساب
+        <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded w-full">
+            إنشاء الحساب
         </button>
     </form>
 </div>

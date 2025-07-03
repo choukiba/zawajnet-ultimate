@@ -1,64 +1,91 @@
 @extends('layouts.app')
 
 @section('content')
-<div dir="rtl" class="bg-gray-50 min-h-screen py-10">
+<div class="bg-white text-gray-800" dir="rtl">
 
-    {{-- ✅ العنوان الرئيسي --}}
-    <div class="text-center mb-8">
-        <h1 class="text-3xl font-bold text-gray-800">اعثر على نصفك الآخر ❤️</h1>
-        <p class="text-gray-600">موقع زواج جاد ومجاني للأعضاء الباحثين عن شريك الحياة</p>
-    </div>
+    {{-- ✅ صورة البانر --}}
+    <div class="relative">
+        <img src="{{ asset('images/banner.jpg') }}" alt="Banner"
+             class="w-full h-[500px] object-cover brightness-75">
 
-    {{-- ✅ نموذج البحث --}}
-    <div class="max-w-4xl mx-auto px-4 mb-10">
-        <form method="GET" action="{{ route('search') }}" class="flex flex-col md:flex-row gap-4 items-center justify-center">
-            <select name="gender" class="w-full md:w-auto p-2 border rounded">
-                <option value="">اختر الجنس</option>
-                <option value="ذكر">ذكر</option>
-                <option value="أنثى">أنثى</option>
-            </select>
-            <select name="country" class="w-full md:w-auto p-2 border rounded">
-                <option value="">اختر الدولة</option>
-                <option value="Algeria">الجزائر</option>
-                <option value="Tunisia">تونس</option>
-                <option value="Morocco">المغرب</option>
-            </select>
-            <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">بحث</button>
+        {{-- ✅ نموذج البحث --}}
+        <form method="GET" action="{{ route('search') }}"
+              class="absolute top-1/2 right-8 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg space-y-3 w-[270px] text-sm">
+
+            {{-- الجنس + العمر --}}
+            <div class="flex gap-2">
+                <select name="gender" class="flex-1 p-2 rounded-md border text-black bg-white shadow-sm">
+                    <option value="">الجنس</option>
+                    <option value="ذكر">ذكر</option>
+                    <option value="أنثى">أنثى</option>
+                </select>
+
+                <select name="age" class="flex-1 p-2 rounded-md border text-black bg-white shadow-sm">
+                    <option value="">العمر</option>
+                    @for ($i = 18; $i <= 60; $i++)
+                        <option value="{{ $i }}">{{ $i }}</option>
+                    @endfor
+                </select>
+            </div>
+
+            {{-- الدولة --}}
+            <div class="flex gap-2">
+                <select name="country" class="flex-1 p-2 rounded-md border text-black bg-white shadow-sm">
+                    <option value="">الدولة</option>
+                    @foreach($countries as $country)
+                        <option value="{{ $country }}">{{ $country }}</option>
+                    @endforeach
+                </select>
+            </div>
+
+            {{-- زر البحث --}}
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-md shadow">
+                بحث
+            </button>
         </form>
-    </div>
 
-    {{-- ✅ عرض الأعضاء المميزين --}}
-    <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-xl font-semibold text-gray-700 mb-6 text-center">أعضاء مميزون</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            @foreach($featuredMembers as $member)
-                <div class="bg-white rounded-lg shadow p-4 text-center">
-                    <img src="{{ $member->photo_url ?? asset('images/default-profile.png') }}" alt="عضو" class="w-28 h-28 object-cover rounded-full mx-auto mb-3">
-                    <h3 class="text-lg font-bold text-gray-800">{{ $member->name }}</h3>
-                    <p class="text-sm text-gray-500">{{ $member->age }} سنة - {{ $member->country }}</p>
-                    <a href="{{ route('profile.show', $member->id) }}" class="text-blue-600 hover:underline text-sm mt-2 inline-block">عرض الملف الشخصي</a>
-                </div>
-            @endforeach
+        {{-- ✅ عدد المتصلين --}}
+        <div class="absolute bottom-4 right-8 bg-white text-gray-700 text-sm px-4 py-1 rounded-full shadow">
+            عدد الأعضاء المتصلين الآن: {{ $onlineMembersCount }}
         </div>
     </div>
 
-    {{-- ✅ المزايا --}}
-    <div class="max-w-5xl mx-auto px-4 mt-16">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div class="bg-white p-6 rounded shadow">
-                <h3 class="font-bold text-xl mb-2 text-blue-700">عضوية مجانية</h3>
-                <p class="text-gray-600">انضم وابدأ رحلتك بدون أي رسوم أولية</p>
+    {{-- ✅ الأعضاء المميزون --}}
+    <div class="text-center py-12">
+        <h2 class="text-xl font-bold mb-6">الأعضاء المميزون</h2>
+
+        @if($featuredMembers->count())
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-6xl mx-auto px-4">
+                @foreach($featuredMembers as $member)
+                    <div class="bg-white border rounded-xl shadow p-3 text-center">
+                        <img src="{{ $member->photo ?? asset('images/default-avatar.png') }}"
+                             alt="Member"
+                             class="w-24 h-24 rounded-full mx-auto mb-2 object-cover">
+                        <h3 class="font-semibold">{{ $member->name }}</h3>
+                        <p class="text-sm text-gray-600">{{ $member->age }} سنة - {{ $member->country }}</p>
+                    </div>
+                @endforeach
             </div>
-            <div class="bg-white p-6 rounded shadow">
-                <h3 class="font-bold text-xl mb-2 text-blue-700">بحث متقدم</h3>
-                <p class="text-gray-600">ابحث حسب العمر، الجنس، الدولة، والمزيد</p>
+        @else
+            <p class="text-gray-500">لا يوجد أعضاء مميزون حالياً</p>
+        @endif
+    </div>
+
+    {{-- ✅ مزايا التسجيل --}}
+    <div class="bg-gray-100 py-12">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 px-4 text-center">
+            <div class="bg-white p-6 rounded-xl shadow">
+                <i class="fa-solid fa-heart text-3xl text-blue-600 mb-4"></i>
+                <h3 class="text-lg font-bold mb-2">عضوية مجانية</h3>
+                <p class="text-sm text-gray-600">سجل مجاناً وابدأ في البحث عن شريك حياتك</p>
             </div>
-            <div class="bg-white p-6 rounded shadow">
-                <h3 class="font-bold text-xl mb-2 text-blue-700">آمن وموثوق</h3>
-                <p class="text-gray-600">نضمن الخصوصية التامة وحماية بياناتك</p>
+            <div class="bg-white p-6 rounded-xl shadow">
+                <i class="fa-solid fa-magnifying-glass text-3xl text-blue-600 mb-4"></i>
+                <h3 class="text-lg font-bold mb-2">بحث متقدم</h3>
+                <p class="text-sm text-gray-600">ابحث باستخدام معايير دقيقة للحصول على نتائج أفضل</p>
             </div>
         </div>
     </div>
-
 </div>
 @endsection
+

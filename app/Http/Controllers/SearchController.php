@@ -7,15 +7,29 @@ use App\Models\Member;
 
 class SearchController extends Controller
 {
-    public function index(Request $request)
+    public function search(Request $request)
     {
-        // البحث في جدول الأعضاء باستخدام الشروط المدخلة
-        $results = Member::query()
-            ->when($request->gender, fn($q) => $q->where('gender', $request->gender))
-            ->when($request->age, fn($q) => $q->where('age', $request->age))
-            ->when($request->country, fn($q) => $q->where('country', $request->country))
-            ->get();
+        $query = Member::query();
 
-        return view('search.results', compact('results'));
+        // فلترة حسب الجنس
+        if ($request->filled('gender')) {
+            $query->where('gender', $request->gender);
+        }
+
+        // فلترة حسب العمر
+        if ($request->filled('age')) {
+            $query->where('age', $request->age);
+        }
+
+        // فلترة حسب الدولة
+        if ($request->filled('country')) {
+            $query->where('country', $request->country);
+        }
+
+        // تنفيذ البحث
+        $members = $query->get();
+
+        return view('search.search-results', compact('members'));
     }
 }
+

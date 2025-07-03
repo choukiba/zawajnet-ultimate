@@ -2,31 +2,36 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
-class Member extends Model
+class Member extends Authenticatable
 {
-    use HasFactory;
+    use Notifiable;
 
-    // 👇 تحديد اسم الجدول صراحة
-    protected $table = 'members';
-
-    // 👇 الحقول القابلة للملء
     protected $fillable = [
         'name',
         'email',
         'password',
-        'gender',
-        'age',
-        'country',
-        'marriage_type',
-        'is_premium',
-        'photo',
+        'country_id',
+        'city_id',
     ];
 
-    // 👇 إخفاء الحقول الحساسة عند التحويل إلى JSON
     protected $hidden = [
         'password',
+        'remember_token',
     ];
+
+    // العلاقة مع الدولة
+    public function country()
+    {
+        return $this->belongsTo(Country::class);
+    }
+
+    // العلاقة مع المدينة
+    public function city()
+    {
+        return $this->belongsTo(City::class);
+    }
 }
+

@@ -1,0 +1,67 @@
+[
+  {
+    "country_id": 1,
+    "name_ar": "الجزائر",
+    "name_en": "Algiers"
+  },
+  {
+    "country_id": 1,
+    "name_ar": "وهران",
+    "name_en": "Oran"
+  },
+  {
+    "country_id": 1,
+    "name_ar": "قسنطينة",
+    "name_en": "Constantine"
+  },
+  {
+    "country_id": 2,
+    "name_ar": "الرباط",
+    "name_en": "Rabat"
+  },
+  {
+    "country_id": 2,
+    "name_ar": "الدار البيضاء",
+    "name_en": "Casablanca"
+  },
+  {
+    "country_id": 3,
+    "name_ar": "تونس",
+    "name_en": "Tunis"
+  },
+  {
+    "country_id": 4,
+    "name_ar": "القاهرة",
+    "name_en": "Cairo"
+  },
+  {
+    "country_id": 5,
+    "name_ar": "الرياض",
+    "name_en": "Riyadh"
+  },
+  {
+    "country_id": 6,
+    "name_ar": "باريس",
+    "name_en": "Paris"
+  },
+  {
+    "country_id": 7,
+    "name_ar": "برلين",
+    "name_en": "Berlin"
+  },
+  {
+    "country_id": 8,
+    "name_ar": "مدريد",
+    "name_en": "Madrid"
+  },
+  {
+    "country_id": 9,
+    "name_ar": "روما",
+    "name_en": "Rome"
+  },
+  {
+    "country_id": 10,
+    "name_ar": "إسطنبول",
+    "name_en": "Istanbul"
+  }
+]
