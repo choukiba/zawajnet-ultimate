@@ -13,6 +13,7 @@ use App\Http\Controllers\SocialAuthController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\ProfileCompletionController;
 use App\Http\Controllers\LocationController;
+use App\Http\Controllers\CityController;
 
 // ✅ الصفحة الرئيسية
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -82,3 +83,18 @@ Route::get('/get-cities/{country_id}', [LocationController::class, 'getCities'])
 
 
 Route::get('/get-cities/{country_id}', [LocationController::class, 'getCities']);
+Route::get('/cities/{country_id}', [App\Http\Controllers\CityController::class, 'getCities']);
+
+
+Route::get('/cities/{country_id}', [CityController::class, 'getCities']);
+
+
+use App\Http\Controllers\StateController;
+
+Route::get('/get-states/{country_id}', [StateController::class, 'getStates'])->name('get.states');
+
+Route::get('/address/create', [AddressController::class, 'create'])->name('address.create');
+Route::post('/address', [AddressController::class, 'store'])->name('address.store');
+Route::get('/get-states/{country_id}', [AddressController::class, 'getStates']);
+
+

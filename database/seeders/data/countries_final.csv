@@ -1,0 +1,243 @@
+id,name_en,name_ar
+1,Japan,Japan
+2,Indonesia,Indonesia
+3,India,India
+4,China,China
+5,Philippines,Philippines
+6,Brazil,Brazil
+7,"Korea, South","Korea, South"
+8,Mexico,Mexico
+9,Egypt,Egypt
+10,Pakistan,Pakistan
+11,Bangladesh,Bangladesh
+12,United States,United States
+13,Thailand,Thailand
+14,Russia,Russia
+15,Argentina,Argentina
+16,Nigeria,Nigeria
+17,Vietnam,Vietnam
+18,Turkey,Turkey
+19,Iran,Iran
+20,Congo (Kinshasa),Congo (Kinshasa)
+21,United Kingdom,United Kingdom
+22,France,France
+23,Peru,Peru
+24,Angola,Angola
+25,Malaysia,Malaysia
+26,Colombia,Colombia
+27,Tanzania,Tanzania
+28,Sudan,Sudan
+29,South Africa,South Africa
+30,Hong Kong,Hong Kong
+31,Saudi Arabia,Saudi Arabia
+32,Chile,Chile
+33,Burma,Burma
+34,Spain,Spain
+35,Iraq,Iraq
+36,Singapore,Singapore
+37,Cameroon,Cameroon
+38,Ethiopia,Ethiopia
+39,Canada,Canada
+40,Kenya,Kenya
+41,Australia,Australia
+42,Côte d’Ivoire,Côte d’Ivoire
+43,Germany,Germany
+44,Afghanistan,Afghanistan
+45,Mali,Mali
+46,Jordan,Jordan
+47,Ghana,Ghana
+48,United Arab Emirates,United Arab Emirates
+49,Venezuela,Venezuela
+50,Morocco,Morocco
+51,Bolivia,Bolivia
+52,Uzbekistan,Uzbekistan
+53,Ecuador,Ecuador
+54,Burkina Faso,Burkina Faso
+55,Greece,Greece
+56,Guatemala,Guatemala
+57,Kuwait,Kuwait
+58,Ukraine,Ukraine
+59,"Korea, North","Korea, North"
+60,Taiwan,Taiwan
+61,Italy,Italy
+62,Syria,Syria
+63,Congo (Brazzaville),Congo (Brazzaville)
+64,Yemen,Yemen
+65,Lebanon,Lebanon
+66,Romania,Romania
+67,Algeria,Algeria
+68,Azerbaijan,Azerbaijan
+69,Kazakhstan,Kazakhstan
+70,Austria,Austria
+71,Cambodia,Cambodia
+72,Somalia,Somalia
+73,Cuba,Cuba
+74,Poland,Poland
+75,Belarus,Belarus
+76,Netherlands,Netherlands
+77,Puerto Rico,Puerto Rico
+78,Zambia,Zambia
+79,Oman,Oman
+80,Uruguay,Uruguay
+81,Hungary,Hungary
+82,Uganda,Uganda
+83,Guinea,Guinea
+84,Tajikistan,Tajikistan
+85,Zimbabwe,Zimbabwe
+86,Costa Rica,Costa Rica
+87,El Salvador,El Salvador
+88,Togo,Togo
+89,Niger,Niger
+90,New Zealand,New Zealand
+91,Senegal,Senegal
+92,Bulgaria,Bulgaria
+93,Mongolia,Mongolia
+94,Czechia,Czechia
+95,Denmark,Denmark
+96,Finland,Finland
+97,Dominican Republic,Dominican Republic
+98,Madagascar,Madagascar
+99,Honduras,Honduras
+100,Belgium,Belgium
+101,Serbia,Serbia
+102,Qatar,Qatar
+103,Libya,Libya
+104,Rwanda,Rwanda
+105,Kyrgyzstan,Kyrgyzstan
+106,Burundi,Burundi
+107,Mozambique,Mozambique
+108,Georgia,Georgia
+109,Armenia,Armenia
+110,Mauritania,Mauritania
+111,Nicaragua,Nicaragua
+112,Turkmenistan,Turkmenistan
+113,Liberia,Liberia
+114,Sweden,Sweden
+115,Malawi,Malawi
+116,Haiti,Haiti
+117,Eritrea,Eritrea
+118,Sierra Leone,Sierra Leone
+119,Laos,Laos
+120,Israel,Israel
+121,Central African Republic,Central African Republic
+122,Panama,Panama
+123,Nepal,Nepal
+124,Chad,Chad
+125,Gabon,Gabon
+126,Croatia,Croatia
+127,Sri Lanka,Sri Lanka
+128,Bahrain,Bahrain
+129,Norway,Norway
+130,Benin,Benin
+131,Moldova,Moldova
+132,Estonia,Estonia
+133,Latvia,Latvia
+134,Djibouti,Djibouti
+135,Tunisia,Tunisia
+136,Ireland,Ireland
+137,Gaza Strip,Gaza Strip
+138,Lithuania,Lithuania
+139,Jamaica,Jamaica
+140,Macau,Macau
+141,Portugal,Portugal
+142,Guinea-Bissau,Guinea-Bissau
+143,Malta,Malta
+144,Paraguay,Paraguay
+145,Slovakia,Slovakia
+146,South Sudan,South Sudan
+147,Switzerland,Switzerland
+148,Namibia,Namibia
+149,North Macedonia,North Macedonia
+150,Albania,Albania
+151,"Gambia, The","Gambia, The"
+152,Lesotho,Lesotho
+153,Cyprus,Cyprus
+154,Reunion,Reunion
+155,Papua New Guinea,Papua New Guinea
+156,Equatorial Guinea,Equatorial Guinea
+157,Slovenia,Slovenia
+158,"Bahamas, The","Bahamas, The"
+159,Martinique,Martinique
+160,Guadeloupe,Guadeloupe
+161,Bosnia and Herzegovina,Bosnia and Herzegovina
+162,Suriname,Suriname
+163,Botswana,Botswana
+164,Guyana,Guyana
+165,Timor-Leste,Timor-Leste
+166,Kosovo,Kosovo
+167,West Bank,West Bank
+168,New Caledonia,New Caledonia
+169,Montenegro,Montenegro
+170,Curaçao,Curaçao
+171,Mauritius,Mauritius
+172,Iceland,Iceland
+173,Maldives,Maldives
+174,Luxembourg,Luxembourg
+175,French Polynesia,French Polynesia
+176,Guam,Guam
+177,Bhutan,Bhutan
+178,Eswatini,Eswatini
+179,Barbados,Barbados
+180,Trinidad and Tobago,Trinidad and Tobago
+181,Fiji,Fiji
+182,Solomon Islands,Solomon Islands
+183,Sao Tome and Principe,Sao Tome and Principe
+184,Mayotte,Mayotte
+185,Cabo Verde,Cabo Verde
+186,Saint Lucia,Saint Lucia
+187,French Guiana,French Guiana
+188,Brunei,Brunei
+189,Vanuatu,Vanuatu
+190,Belize,Belize
+191,Monaco,Monaco
+192,Samoa,Samoa
+193,Gibraltar,Gibraltar
+194,Grenada,Grenada
+195,Jersey,Jersey
+196,Comoros,Comoros
+197,Marshall Islands,Marshall Islands
+198,Kiribati,Kiribati
+199,Aruba,Aruba
+200,Isle of Man,Isle of Man
+201,Cayman Islands,Cayman Islands
+202,Tonga,Tonga
+203,Seychelles,Seychelles
+204,Saint Vincent and the Grenadines,Saint Vincent and the Grenadines
+205,Andorra,Andorra
+206,Antigua and Barbuda,Antigua and Barbuda
+207,Guernsey,Guernsey
+208,Greenland,Greenland
+209,Dominica,Dominica
+210,"Micronesia, Federated States of","Micronesia, Federated States of"
+211,Faroe Islands,Faroe Islands
+212,Saint Kitts and Nevis,Saint Kitts and Nevis
+213,"Virgin Islands, British","Virgin Islands, British"
+214,American Samoa,American Samoa
+215,San Marino,San Marino
+216,"Bonaire, Sint Eustatius, and Saba","Bonaire, Sint Eustatius, and Saba"
+217,Palau,Palau
+218,Tuvalu,Tuvalu
+219,Liechtenstein,Liechtenstein
+220,Saint Martin,Saint Martin
+221,Saint Pierre and Miquelon,Saint Pierre and Miquelon
+222,Cook Islands,Cook Islands
+223,Turks and Caicos Islands,Turks and Caicos Islands
+224,Anguilla,Anguilla
+225,Northern Mariana Islands,Northern Mariana Islands
+226,Saint Barthelemy,Saint Barthelemy
+227,Falkland Islands (Islas Malvinas),Falkland Islands (Islas Malvinas)
+228,Sint Maarten,Sint Maarten
+229,Svalbard,Svalbard
+230,Christmas Island,Christmas Island
+231,Wallis and Futuna,Wallis and Futuna
+232,Bermuda,Bermuda
+233,Vatican City,Vatican City
+234,Nauru,Nauru
+235,"Saint Helena, Ascension, and Tristan da Cunha","Saint Helena, Ascension, and Tristan da Cunha"
+236,Niue,Niue
+237,Montserrat,Montserrat
+238,Norfolk Island,Norfolk Island
+239,South Georgia and South Sandwich Islands,South Georgia and South Sandwich Islands
+240,Pitcairn Islands,Pitcairn Islands
+241,South Georgia And South Sandwich Islands,South Georgia And South Sandwich Islands
+242,U.S. Virgin Islands,U.S. Virgin Islands

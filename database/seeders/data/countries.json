@@ -48,5 +48,10 @@
     "id": 10,
     "name_ar": "تركيا",
     "name_en": "Turkey"
+  },
+  {
+    "id": 10,
+    "name_ar": "فلسطين",
+    "name_en": "PALASTINE"
   }
 ]

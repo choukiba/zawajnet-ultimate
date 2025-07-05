@@ -1,4 +1,3 @@
-
 <?php
 
 namespace Database\Seeders;
@@ -8,17 +7,20 @@ use Illuminate\Support\Facades\DB;
 
 class CitiesSeeder extends Seeder
 {
-    public function run(): void
+    public function run()
     {
-        DB::table('cities')->insert([
-            ['country_id' => 1, 'name_ar' => 'الجزائر العاصمة'],
-            ['country_id' => 1, 'name_ar' => 'وهران'],
-            ['country_id' => 2, 'name_ar' => 'الرياض'],
-            ['country_id' => 2, 'name_ar' => 'جدة'],
-            ['country_id' => 3, 'name_ar' => 'القاهرة'],
-            ['country_id' => 3, 'name_ar' => 'الإسكندرية'],
-            ['country_id' => 4, 'name_ar' => 'الرباط'],
-            ['country_id' => 4, 'name_ar' => 'الدار البيضاء'],
-        ]);
+        DB::table('cities')->truncate();
+
+        $cities = [
+            ['name_ar' => 'الجزائر', 'country_id' => 1],
+            ['name_ar' => 'وهران', 'country_id' => 1],
+            ['name_ar' => 'قسنطينة', 'country_id' => 1],
+            ['name_ar' => 'باريس', 'country_id' => 2],
+            ['name_ar' => 'مرسيليا', 'country_id' => 2],
+            ['name_ar' => 'إسطنبول', 'country_id' => 3],
+            ['name_ar' => 'أنقرة', 'country_id' => 3],
+        ];
+
+        DB::table('cities')->insert($cities);
     }
 }
